@@ -2,26 +2,26 @@ import json
 
 def serp_flight_data():
     return json.loads(r'''
-{
+    {
     "search_metadata": {
-        "id": "6928d189302394f7e3bf8303",
+        "id": "692f40febd1731899f939947",
         "status": "Success",
-        "json_endpoint": "https://serpapi.com/searches/3d977dbd1c1f12d7/6928d189302394f7e3bf8303.json",
-        "created_at": "2025-11-27 22:32:41 UTC",
-        "processed_at": "2025-11-27 22:32:41 UTC",
-        "google_flights_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=CAD&tfs=CBwQAhoeEgoyMDI2LTAyLTAxagcIARIDWVlacgcIARIDTUFOGh4SCjIwMjYtMDItMTBqBwgBEgNNQU5yBwgBEgNZWVpCAQFIAXABmAEB&tfu=EgIIAQ",
-        "raw_html_file": "https://serpapi.com/searches/3d977dbd1c1f12d7/6928d189302394f7e3bf8303.html",
-        "prettify_html_file": "https://serpapi.com/searches/3d977dbd1c1f12d7/6928d189302394f7e3bf8303.prettify",
-        "total_time_taken": 0.44
+        "json_endpoint": "https://serpapi.com/searches/4b4d30e44e2de780/692f40febd1731899f939947.json",
+        "created_at": "2025-12-02 19:41:50 UTC",
+        "processed_at": "2025-12-02 19:41:50 UTC",
+        "google_flights_url": "https://www.google.com/travel/flights?hl=en&gl=ca&curr=CAD&tfs=CBwQAhoeEgoyMDI2LTAyLTA1agcIARIDWVlacgcIARIDSkZLGh4SCjIwMjYtMDItMTNqBwgBEgNKRktyBwgBEgNZWVpCAQFIAXABmAEB&tfu=EgIIAQ",
+        "raw_html_file": "https://serpapi.com/searches/4b4d30e44e2de780/692f40febd1731899f939947.html",
+        "prettify_html_file": "https://serpapi.com/searches/4b4d30e44e2de780/692f40febd1731899f939947.prettify",
+        "total_time_taken": 1.36
     },
     "search_parameters": {
         "engine": "google_flights",
         "hl": "en",
-        "gl": "us",
+        "gl": "ca",
         "departure_id": "YYZ",
-        "arrival_id": "MAN",
-        "outbound_date": "2026-02-01",
-        "return_date": "2026-02-10",
+        "arrival_id": "JFK",
+        "outbound_date": "2026-02-05",
+        "return_date": "2026-02-13",
         "adults": 1,
         "currency": "CAD"
     },
@@ -32,150 +32,47 @@ def serp_flight_data():
             "departure_airport": {
                 "name": "Toronto Pearson International Airport",
                 "id": "YYZ",
-                "time": "2026-02-01 17:25"
+                "time": "2026-02-05 07:00"
             },
             "arrival_airport": {
-                "name": "Dublin Airport",
-                "id": "DUB",
-                "time": "2026-02-02 05:15"
+                "name": "John F. Kennedy International Airport",
+                "id": "JFK",
+                "time": "2026-02-05 09:00"
             },
-            "duration": 410,
-            "airplane": "Airbus A321neo",
-            "airline": "Aer Lingus",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/EI.png",
+            "duration": 120,
+            "airplane": "Embraer 175",
+            "airline": "American",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
             "travel_class": "Economy",
-            "flight_number": "EI 126",
+            "flight_number": "AA 4559",
             "ticket_also_sold_by": [
-                "British Airways"
-            ],
-            "legroom": "31 in",
-            "extensions": [
-                "Average legroom (31 in)",
-                "Wi-Fi for a fee",
-                "In-seat power & USB outlets",
-                "On-demand video",
-                "Carbon emissions estimate: 384 kg"
-            ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Dublin Airport",
-                "id": "DUB",
-                "time": "2026-02-02 06:30"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 07:35"
-            },
-            "duration": 65,
-            "airplane": "Airbus A320",
-            "airline": "Aer Lingus",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/EI.png",
-            "travel_class": "Economy",
-            "flight_number": "EI 202",
-            "ticket_also_sold_by": [
-                "British Airways"
+                "Porter Airlines"
             ],
             "legroom": "30 in",
             "extensions": [
                 "Average legroom (30 in)",
-                "Carbon emissions estimate: 48 kg"
-            ]
-            }
-        ],
-        "layovers": [
-            {
-            "duration": 75,
-            "name": "Dublin Airport",
-            "id": "DUB"
-            }
-        ],
-        "total_duration": 550,
-        "carbon_emissions": {
-            "this_flight": 434000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 3
-        },
-        "price": 932,
-        "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/EI.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3RGU1RFeU5ueEZTVEl3TWhvTENJUFlCUkFDR2dORFFVUTRISERraGdRPSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkRVQiIsbnVsbCwiRUkiLCIxMjYiXSxbIkRVQiIsIjIwMjYtMDItMDIiLCJNQU4iLG51bGwsIkVJIiwiMjAyIl1dXQ=="
-        },
-        {
-        "flights": [
-            {
-            "departure_airport": {
-                "name": "Toronto Pearson International Airport",
-                "id": "YYZ",
-                "time": "2026-02-01 19:40"
-            },
-            "arrival_airport": {
-                "name": "Keflavík International Airport",
-                "id": "KEF",
-                "time": "2026-02-02 06:25"
-            },
-            "duration": 345,
-            "airplane": "Boeing 737MAX 9 Passenger",
-            "airline": "Icelandair",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/FI.png",
-            "travel_class": "Economy",
-            "flight_number": "FI 602",
-            "legroom": "31 in",
-            "extensions": [
-                "Average legroom (31 in)",
                 "Wi-Fi for a fee",
-                "In-seat USB outlet",
-                "On-demand video",
-                "Carbon emissions estimate: 309 kg"
+                "In-seat power & USB outlets",
+                "Stream media to your device",
+                "Carbon emissions estimate: 110 kg"
             ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Keflavík International Airport",
-                "id": "KEF",
-                "time": "2026-02-02 08:00"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 10:45"
-            },
-            "duration": 165,
-            "airplane": "Boeing 737MAX 8 Passenger",
-            "airline": "Icelandair",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/FI.png",
-            "travel_class": "Economy",
-            "flight_number": "FI 440",
-            "legroom": "31 in",
-            "extensions": [
-                "Average legroom (31 in)",
-                "Wi-Fi for a fee",
-                "In-seat USB outlet",
-                "On-demand video",
-                "Carbon emissions estimate: 147 kg"
-            ]
+            "plane_and_crew_by": "Republic Airways as American Eagle"
             }
         ],
-        "layovers": [
-            {
-            "duration": 95,
-            "name": "Keflavík International Airport",
-            "id": "KEF"
-            }
-        ],
-        "total_duration": 605,
+        "total_duration": 120,
         "carbon_emissions": {
-            "this_flight": 457000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 9
+            "this_flight": 111000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 13
         },
-        "price": 939,
+        "price": 349,
         "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/FI.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3RHU1RZd01ueEdTVFEwTUJvTENQL2NCUkFDR2dORFFVUTRISENwaWdRPSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIktFRiIsbnVsbCwiRkkiLCI2MDIiXSxbIktFRiIsIjIwMjYtMDItMDIiLCJNQU4iLG51bGwsIkZJIiwiNDQwIl1dXQ=="
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pCUVRRMU5Ua2FDd2lya0FJUUFob0RRMEZFT0J4dzhNSUIiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkFBIiwiNDU1OSJdXV0="
         },
         {
         "flights": [
@@ -183,81 +80,47 @@ def serp_flight_data():
             "departure_airport": {
                 "name": "Toronto Pearson International Airport",
                 "id": "YYZ",
-                "time": "2026-02-01 12:07"
+                "time": "2026-02-05 10:30"
             },
             "arrival_airport": {
                 "name": "John F. Kennedy International Airport",
                 "id": "JFK",
-                "time": "2026-02-01 14:01"
+                "time": "2026-02-05 12:15"
             },
-            "duration": 114,
-            "airplane": "Canadair RJ 900",
-            "airline": "Delta",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+            "duration": 105,
+            "airplane": "Embraer 175",
+            "airline": "American",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
             "travel_class": "Economy",
-            "flight_number": "DL 5098",
+            "flight_number": "AA 4552",
             "ticket_also_sold_by": [
-                "KLM",
-                "Air France"
+                "Porter Airlines"
             ],
-            "legroom": "31 in",
+            "legroom": "30 in",
             "extensions": [
-                "Average legroom (31 in)",
+                "Average legroom (30 in)",
                 "Wi-Fi for a fee",
-                "Carbon emissions estimate: 111 kg"
+                "In-seat power & USB outlets",
+                "Stream media to your device",
+                "Carbon emissions estimate: 110 kg"
             ],
-            "plane_and_crew_by": "Endeavor Air DBA Delta Connection"
-            },
-            {
-            "departure_airport": {
-                "name": "John F. Kennedy International Airport",
-                "id": "JFK",
-                "time": "2026-02-01 18:40"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 06:40"
-            },
-            "duration": 420,
-            "airplane": "Airbus A330",
-            "airline": "Virgin Atlantic",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/VS.png",
-            "travel_class": "Economy",
-            "flight_number": "VS 128",
-            "ticket_also_sold_by": [
-                "KLM",
-                "Air France",
-                "Delta"
-            ],
-            "legroom": "31 in",
-            "extensions": [
-                "Average legroom (31 in)",
-                "Wi-Fi for a fee",
-                "In-seat USB outlet",
-                "On-demand video",
-                "Carbon emissions estimate: 406 kg"
-            ],
-            "overnight": true
+            "plane_and_crew_by": "Republic Airways as American Eagle"
             }
         ],
-        "layovers": [
-            {
-            "duration": 279,
-            "name": "John F. Kennedy International Airport",
-            "id": "JFK"
-            }
-        ],
-        "total_duration": 813,
+        "total_duration": 105,
         "carbon_emissions": {
-            "this_flight": 518000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 23
+            "this_flight": 111000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 13
         },
-        "price": 972,
+        "price": 349,
         "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/multi.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3hFVERVd09UaDhWbE14TWpnYUN3alo5Z1VRQWhvRFEwRkVPQnh3MFp3RSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkpGSyIsbnVsbCwiREwiLCI1MDk4Il0sWyJKRksiLCIyMDI2LTAyLTAxIiwiTUFOIixudWxsLCJWUyIsIjEyOCJdXV0="
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pCUVRRMU5USWFDd2lya0FJUUFob0RRMEZFT0J4dzhNSUIiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkFBIiwiNDU1MiJdXV0="
         },
         {
         "flights": [
@@ -265,153 +128,46 @@ def serp_flight_data():
             "departure_airport": {
                 "name": "Toronto Pearson International Airport",
                 "id": "YYZ",
-                "time": "2026-02-01 16:50"
+                "time": "2026-02-05 20:55"
             },
             "arrival_airport": {
-                "name": "Frankfurt Airport",
-                "id": "FRA",
-                "time": "2026-02-02 06:40"
+                "name": "John F. Kennedy International Airport",
+                "id": "JFK",
+                "time": "2026-02-05 22:39"
             },
-            "duration": 470,
-            "airplane": "Boeing 787",
+            "duration": 104,
+            "airplane": "Embraer 175",
             "airline": "Air Canada",
             "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AC.png",
             "travel_class": "Economy",
-            "flight_number": "AC 840",
+            "flight_number": "AC 8556",
             "ticket_also_sold_by": [
-                "Lufthansa"
+                "United"
             ],
             "legroom": "31 in",
             "extensions": [
                 "Average legroom (31 in)",
-                "Wi-Fi for a fee",
-                "In-seat power & USB outlets",
-                "On-demand video",
-                "Carbon emissions estimate: 336 kg"
-            ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Frankfurt Airport",
-                "id": "FRA",
-                "time": "2026-02-02 07:55"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 08:45"
-            },
-            "duration": 110,
-            "airplane": "Airbus A319",
-            "airline": "Lufthansa",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/LH.png",
-            "travel_class": "Economy",
-            "flight_number": "LH 940",
-            "legroom": "30 in",
-            "extensions": [
-                "Average legroom (30 in)",
-                "Wi-Fi for a fee",
-                "Carbon emissions estimate: 109 kg"
-            ]
-            }
-        ],
-        "layovers": [
-            {
-            "duration": 75,
-            "name": "Frankfurt Airport",
-            "id": "FRA"
-            }
-        ],
-        "total_duration": 655,
-        "carbon_emissions": {
-            "this_flight": 446000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 6
-        },
-        "price": 1030,
-        "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/multi.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3RCUXpnME1IeE1TRGswTUJvTENMT2tCaEFDR2dORFFVUTRISENhdlFRPSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkZSQSIsbnVsbCwiQUMiLCI4NDAiXSxbIkZSQSIsIjIwMjYtMDItMDIiLCJNQU4iLG51bGwsIkxIIiwiOTQwIl1dXQ=="
-        },
-        {
-        "flights": [
-            {
-            "departure_airport": {
-                "name": "Toronto Pearson International Airport",
-                "id": "YYZ",
-                "time": "2026-02-01 18:05"
-            },
-            "arrival_airport": {
-                "name": "Heathrow Airport",
-                "id": "LHR",
-                "time": "2026-02-02 06:15"
-            },
-            "duration": 430,
-            "airplane": "Boeing 787",
-            "airline": "British Airways",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/BA.png",
-            "travel_class": "Economy",
-            "flight_number": "BA 92",
-            "ticket_also_sold_by": [
-                "American",
-                "Finnair"
-            ],
-            "legroom": "31 in",
-            "extensions": [
-                "Average legroom (31 in)",
-                "In-seat power & USB outlets",
-                "On-demand video",
-                "Carbon emissions estimate: 344 kg"
-            ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Heathrow Airport",
-                "id": "LHR",
-                "time": "2026-02-02 07:45"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 08:50"
-            },
-            "duration": 65,
-            "airplane": "Airbus A320",
-            "airline": "British Airways",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/BA.png",
-            "travel_class": "Economy",
-            "flight_number": "BA 1360",
-            "ticket_also_sold_by": [
-                "American"
-            ],
-            "legroom": "29 in",
-            "extensions": [
-                "Below average legroom (29 in)",
-                "Wi-Fi for a fee",
                 "In-seat USB outlet",
-                "Carbon emissions estimate: 47 kg"
-            ]
+                "Stream media to your device",
+                "Carbon emissions estimate: 110 kg"
+            ],
+            "plane_and_crew_by": "Air Canada Express - Jazz"
             }
         ],
-        "layovers": [
-            {
-            "duration": 90,
-            "name": "Heathrow Airport",
-            "id": "LHR"
-            }
-        ],
-        "total_duration": 585,
+        "total_duration": 104,
         "carbon_emissions": {
-            "this_flight": 391000,
-            "typical_for_this_route": 420000,
-            "difference_percent": -7
+            "this_flight": 111000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 13
         },
-        "price": 1127,
+        "price": 416,
         "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/BA.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3RDUVRreWZFSkJNVE0yTUJvTENJUHdCaEFDR2dORFFVUTRISENNOHdRPSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkxIUiIsbnVsbCwiQkEiLCI5MiJdLFsiTEhSIiwiMjAyNi0wMi0wMiIsIk1BTiIsbnVsbCwiQkEiLCIxMzYwIl1dXQ=="
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AC.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pCUXpnMU5UWWFDd2lreEFJUUFob0RRMEZFT0J4d2h1Z0IiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkFDIiwiODU1NiJdXV0="
         }
     ],
     "other_flights": [
@@ -421,19 +177,229 @@ def serp_flight_data():
             "departure_airport": {
                 "name": "Toronto Pearson International Airport",
                 "id": "YYZ",
-                "time": "2026-02-01 18:13"
+                "time": "2026-02-05 10:59"
+            },
+            "arrival_airport": {
+                "name": "Ronald Reagan Washington National Airport",
+                "id": "DCA",
+                "time": "2026-02-05 12:49"
+            },
+            "duration": 110,
+            "airplane": "Canadair RJ 900",
+            "airline": "American",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+            "travel_class": "Economy",
+            "flight_number": "AA 5668",
+            "legroom": "31 in",
+            "extensions": [
+                "Average legroom (31 in)",
+                "Wi-Fi for a fee",
+                "In-seat power & USB outlets",
+                "Stream media to your device",
+                "Carbon emissions estimate: 100 kg"
+            ],
+            "plane_and_crew_by": "PSA Airlines as American Eagle"
+            },
+            {
+            "departure_airport": {
+                "name": "Ronald Reagan Washington National Airport",
+                "id": "DCA",
+                "time": "2026-02-05 13:35"
             },
             "arrival_airport": {
                 "name": "John F. Kennedy International Airport",
                 "id": "JFK",
-                "time": "2026-02-01 20:18"
+                "time": "2026-02-05 14:57"
             },
-            "duration": 125,
+            "duration": 82,
+            "airplane": "Embraer 175",
+            "airline": "American",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+            "travel_class": "Economy",
+            "flight_number": "AA 4522",
+            "legroom": "30 in",
+            "extensions": [
+                "Average legroom (30 in)",
+                "Wi-Fi for a fee",
+                "In-seat power & USB outlets",
+                "Stream media to your device",
+                "Carbon emissions estimate: 80 kg"
+            ],
+            "plane_and_crew_by": "Republic Airways as American Eagle"
+            }
+        ],
+        "layovers": [
+            {
+            "duration": 46,
+            "name": "Ronald Reagan Washington National Airport",
+            "id": "DCA"
+            }
+        ],
+        "total_duration": 238,
+        "carbon_emissions": {
+            "this_flight": 181000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 85
+        },
+        "price": 349,
+        "type": "Round trip",
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZzFCUVRVMk5qaDhRVUUwTlRJeUdnc0lxNUFDRUFJYUEwTkJSRGdjY1BEQ0FRPT0iLFtbIllZWiIsIjIwMjYtMDItMDUiLCJEQ0EiLG51bGwsIkFBIiwiNTY2OCJdLFsiRENBIiwiMjAyNi0wMi0wNSIsIkpGSyIsbnVsbCwiQUEiLCI0NTIyIl1dXQ=="
+        },
+        {
+        "flights": [
+            {
+            "departure_airport": {
+                "name": "Toronto Pearson International Airport",
+                "id": "YYZ",
+                "time": "2026-02-05 17:15"
+            },
+            "arrival_airport": {
+                "name": "Ronald Reagan Washington National Airport",
+                "id": "DCA",
+                "time": "2026-02-05 19:14"
+            },
+            "duration": 119,
+            "airplane": "Canadair RJ 700",
+            "airline": "American",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+            "travel_class": "Economy",
+            "flight_number": "AA 5667",
+            "legroom": "31 in",
+            "extensions": [
+                "Average legroom (31 in)",
+                "Wi-Fi for a fee",
+                "In-seat power & USB outlets",
+                "Stream media to your device",
+                "Carbon emissions estimate: 118 kg"
+            ],
+            "often_delayed_by_over_30_min": true,
+            "plane_and_crew_by": "PSA Airlines as American Eagle"
+            },
+            {
+            "departure_airport": {
+                "name": "Ronald Reagan Washington National Airport",
+                "id": "DCA",
+                "time": "2026-02-06 06:10"
+            },
+            "arrival_airport": {
+                "name": "John F. Kennedy International Airport",
+                "id": "JFK",
+                "time": "2026-02-06 07:27"
+            },
+            "duration": 77,
+            "airplane": "Embraer 175",
+            "airline": "American",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+            "travel_class": "Economy",
+            "flight_number": "AA 4396",
+            "legroom": "30 in",
+            "extensions": [
+                "Average legroom (30 in)",
+                "Wi-Fi for a fee",
+                "In-seat power & USB outlets",
+                "Stream media to your device",
+                "Carbon emissions estimate: 80 kg"
+            ],
+            "plane_and_crew_by": "Republic Airways as American Eagle"
+            }
+        ],
+        "layovers": [
+            {
+            "duration": 656,
+            "name": "Ronald Reagan Washington National Airport",
+            "id": "DCA",
+            "overnight": true
+            }
+        ],
+        "total_duration": 852,
+        "carbon_emissions": {
+            "this_flight": 200000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 104
+        },
+        "price": 349,
+        "type": "Round trip",
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AA.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZzFCUVRVMk5qZDhRVUUwTXprMkdnc0lxNUFDRUFJYUEwTkJSRGdjY1BEQ0FRPT0iLFtbIllZWiIsIjIwMjYtMDItMDUiLCJEQ0EiLG51bGwsIkFBIiwiNTY2NyJdLFsiRENBIiwiMjAyNi0wMi0wNiIsIkpGSyIsbnVsbCwiQUEiLCI0Mzk2Il1dXQ=="
+        },
+        {
+        "flights": [
+            {
+            "departure_airport": {
+                "name": "Toronto Pearson International Airport",
+                "id": "YYZ",
+                "time": "2026-02-05 14:30"
+            },
+            "arrival_airport": {
+                "name": "John F. Kennedy International Airport",
+                "id": "JFK",
+                "time": "2026-02-05 16:09"
+            },
+            "duration": 99,
+            "airplane": "Embraer 175",
+            "airline": "Air Canada",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AC.png",
+            "travel_class": "Economy",
+            "flight_number": "AC 8554",
+            "ticket_also_sold_by": [
+                "United"
+            ],
+            "legroom": "31 in",
+            "extensions": [
+                "Average legroom (31 in)",
+                "In-seat USB outlet",
+                "Stream media to your device",
+                "Carbon emissions estimate: 110 kg"
+            ],
+            "plane_and_crew_by": "Air Canada Express - Jazz"
+            }
+        ],
+        "total_duration": 99,
+        "carbon_emissions": {
+            "this_flight": 111000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 13
+        },
+        "price": 454,
+        "type": "Round trip",
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AC.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pCUXpnMU5UUWFDd2kzNGdJUUFob0RRMEZFT0J4d3ovMEIiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkFDIiwiODU1NCJdXV0="
+        },
+        {
+        "flights": [
+            {
+            "departure_airport": {
+                "name": "Toronto Pearson International Airport",
+                "id": "YYZ",
+                "time": "2026-02-05 06:00"
+            },
+            "arrival_airport": {
+                "name": "John F. Kennedy International Airport",
+                "id": "JFK",
+                "time": "2026-02-05 08:04"
+            },
+            "duration": 124,
             "airplane": "Canadair RJ 900",
             "airline": "Delta",
             "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
             "travel_class": "Economy",
-            "flight_number": "DL 5163",
+            "flight_number": "DL 5066",
+            "ticket_also_sold_by": [
+                "WestJet"
+            ],
             "legroom": "31 in",
             "extensions": [
                 "Average legroom (31 in)",
@@ -441,56 +407,68 @@ def serp_flight_data():
                 "Carbon emissions estimate: 111 kg"
             ],
             "plane_and_crew_by": "Endeavor Air DBA Delta Connection"
-            },
+            }
+        ],
+        "total_duration": 124,
+        "carbon_emissions": {
+            "this_flight": 112000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 14
+        },
+        "price": 534,
+        "type": "Round trip",
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pFVERVd05qWWFDd2lYb1FNUUFob0RRMEZFT0J4d3dxb0MiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkRMIiwiNTA2NiJdXV0="
+        },
+        {
+        "flights": [
             {
             "departure_airport": {
+                "name": "Toronto Pearson International Airport",
+                "id": "YYZ",
+                "time": "2026-02-05 18:13"
+            },
+            "arrival_airport": {
                 "name": "John F. Kennedy International Airport",
                 "id": "JFK",
-                "time": "2026-02-02 18:40"
+                "time": "2026-02-05 20:18"
             },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-03 06:40"
-            },
-            "duration": 420,
-            "airplane": "Airbus A330",
-            "airline": "Virgin Atlantic",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/VS.png",
+            "duration": 125,
+            "airplane": "Canadair RJ 900",
+            "airline": "Delta",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
             "travel_class": "Economy",
-            "flight_number": "VS 128",
+            "flight_number": "DL 5163",
             "ticket_also_sold_by": [
-                "Delta"
+                "WestJet"
             ],
             "legroom": "31 in",
             "extensions": [
                 "Average legroom (31 in)",
                 "Wi-Fi for a fee",
-                "In-seat USB outlet",
-                "On-demand video",
-                "Carbon emissions estimate: 406 kg"
+                "Carbon emissions estimate: 111 kg"
             ],
-            "overnight": true
+            "plane_and_crew_by": "Endeavor Air DBA Delta Connection"
             }
         ],
-        "layovers": [
-            {
-            "duration": 1342,
-            "name": "John F. Kennedy International Airport",
-            "id": "JFK",
-            "overnight": true
-            }
-        ],
-        "total_duration": 1887,
+        "total_duration": 125,
         "carbon_emissions": {
-            "this_flight": 518000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 23
+            "this_flight": 112000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 14
         },
-        "price": 976,
+        "price": 573,
         "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/multi.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3hFVERVeE5qTjhWbE14TWpnYUN3aWwrZ1VRQWhvRFEwRkVPQnh3bVo4RSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkpGSyIsbnVsbCwiREwiLCI1MTYzIl0sWyJKRksiLCIyMDI2LTAyLTAyIiwiTUFOIixudWxsLCJWUyIsIjEyOCJdXV0="
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
+        ],
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pFVERVeE5qTWFDd2pFdndNUUFob0RRMEZFT0J4d25zQUMiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkRMIiwiNTE2MyJdXV0="
         },
         {
         "flights": [
@@ -498,480 +476,298 @@ def serp_flight_data():
             "departure_airport": {
                 "name": "Toronto Pearson International Airport",
                 "id": "YYZ",
-                "time": "2026-02-01 18:15"
+                "time": "2026-02-05 12:07"
             },
             "arrival_airport": {
-                "name": "Frankfurt Airport",
-                "id": "FRA",
-                "time": "2026-02-02 07:55"
+                "name": "John F. Kennedy International Airport",
+                "id": "JFK",
+                "time": "2026-02-05 14:01"
             },
-            "duration": 460,
-            "airplane": "Boeing 787",
-            "airline": "Lufthansa",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/LH.png",
+            "duration": 114,
+            "airplane": "Canadair RJ 900",
+            "airline": "Delta",
+            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
             "travel_class": "Economy",
-            "flight_number": "LH 471",
+            "flight_number": "DL 5098",
             "ticket_also_sold_by": [
-                "Air Canada"
-            ],
-            "legroom": "32 in",
-            "extensions": [
-                "Above average legroom (32 in)",
-                "Wi-Fi for a fee",
-                "In-seat power & USB outlets",
-                "On-demand video",
-                "Carbon emissions estimate: 378 kg"
-            ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Frankfurt Airport",
-                "id": "FRA",
-                "time": "2026-02-02 11:30"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 12:20"
-            },
-            "duration": 110,
-            "airplane": "Airbus A319",
-            "airline": "Lufthansa",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/LH.png",
-            "travel_class": "Economy",
-            "flight_number": "LH 942",
-            "legroom": "30 in",
-            "extensions": [
-                "Average legroom (30 in)",
-                "Wi-Fi for a fee",
-                "Carbon emissions estimate: 109 kg"
-            ]
-            }
-        ],
-        "layovers": [
-            {
-            "duration": 215,
-            "name": "Frankfurt Airport",
-            "id": "FRA"
-            }
-        ],
-        "total_duration": 785,
-        "carbon_emissions": {
-            "this_flight": 488000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 16
-        },
-        "price": 1030,
-        "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/LH.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3RNU0RRM01YeE1TRGswTWhvTENMT2tCaEFDR2dORFFVUTRISENhdlFRPSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkZSQSIsbnVsbCwiTEgiLCI0NzEiXSxbIkZSQSIsIjIwMjYtMDItMDIiLCJNQU4iLG51bGwsIkxIIiwiOTQyIl1dXQ=="
-        },
-        {
-        "flights": [
-            {
-            "departure_airport": {
-                "name": "Toronto Pearson International Airport",
-                "id": "YYZ",
-                "time": "2026-02-01 21:30"
-            },
-            "arrival_airport": {
-                "name": "Frankfurt Airport",
-                "id": "FRA",
-                "time": "2026-02-02 11:10"
-            },
-            "duration": 460,
-            "airplane": "Boeing 787",
-            "airline": "Air Canada",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/AC.png",
-            "travel_class": "Economy",
-            "flight_number": "AC 842",
-            "ticket_also_sold_by": [
-                "Lufthansa"
+                "WestJet"
             ],
             "legroom": "31 in",
             "extensions": [
                 "Average legroom (31 in)",
                 "Wi-Fi for a fee",
-                "In-seat power & USB outlets",
-                "On-demand video",
-                "Carbon emissions estimate: 336 kg"
+                "Carbon emissions estimate: 111 kg"
             ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Frankfurt Airport",
-                "id": "FRA",
-                "time": "2026-02-02 14:00"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 14:50"
-            },
-            "duration": 110,
-            "airplane": "Airbus A319",
-            "airline": "Lufthansa",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/LH.png",
-            "travel_class": "Economy",
-            "flight_number": "LH 944",
-            "legroom": "30 in",
-            "extensions": [
-                "Average legroom (30 in)",
-                "Wi-Fi for a fee",
-                "Carbon emissions estimate: 109 kg"
-            ]
+            "plane_and_crew_by": "Endeavor Air DBA Delta Connection"
             }
         ],
-        "layovers": [
-            {
-            "duration": 170,
-            "name": "Frankfurt Airport",
-            "id": "FRA"
-            }
-        ],
-        "total_duration": 740,
+        "total_duration": 114,
         "carbon_emissions": {
-            "this_flight": 446000,
-            "typical_for_this_route": 420000,
-            "difference_percent": 6
+            "this_flight": 112000,
+            "typical_for_this_route": 98000,
+            "difference_percent": 14
         },
-        "price": 1105,
+        "price": 699,
         "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/multi.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3RCUXpnME1ueE1TRGswTkJvTENQL2VCaEFDR2dORFFVUTRISEQ2NWdRPSIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkZSQSIsbnVsbCwiQUMiLCI4NDIiXSxbIkZSQSIsIjIwMjYtMDItMDIiLCJNQU4iLG51bGwsIkxIIiwiOTQ0Il1dXQ=="
-        },
-        {
-        "flights": [
-            {
-            "departure_airport": {
-                "name": "Toronto Pearson International Airport",
-                "id": "YYZ",
-                "time": "2026-02-01 17:50"
-            },
-            "arrival_airport": {
-                "name": "Amsterdam Airport Schiphol",
-                "id": "AMS",
-                "time": "2026-02-02 07:05"
-            },
-            "duration": 435,
-            "airplane": "Boeing 787-10",
-            "airline": "KLM",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/KL.png",
-            "travel_class": "Economy",
-            "flight_number": "KL 692",
-            "ticket_also_sold_by": [
-                "Virgin Atlantic"
-            ],
-            "legroom": "31 in",
-            "extensions": [
-                "Average legroom (31 in)",
-                "Wi-Fi for a fee",
-                "In-seat USB outlet",
-                "On-demand video",
-                "Carbon emissions estimate: 309 kg"
-            ],
-            "overnight": true
-            },
-            {
-            "departure_airport": {
-                "name": "Amsterdam Airport Schiphol",
-                "id": "AMS",
-                "time": "2026-02-02 07:55"
-            },
-            "arrival_airport": {
-                "name": "Manchester Airport",
-                "id": "MAN",
-                "time": "2026-02-02 08:20"
-            },
-            "duration": 85,
-            "airplane": "Boeing 737",
-            "airline": "KLM",
-            "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/KL.png",
-            "travel_class": "Economy",
-            "flight_number": "KL 1029",
-            "ticket_also_sold_by": [
-                "Virgin Atlantic"
-            ],
-            "legroom": "30 in",
-            "extensions": [
-                "Average legroom (30 in)",
-                "In-seat USB outlet",
-                "Carbon emissions estimate: 57 kg"
-            ]
-            }
+        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/DL.png",
+        "extensions": [
+            "Checked baggage for a fee",
+            "Bag and fare conditions depend on the return flight"
         ],
-        "layovers": [
-            {
-            "duration": 50,
-            "name": "Amsterdam Airport Schiphol",
-            "id": "AMS"
-            }
-        ],
-        "total_duration": 570,
-        "carbon_emissions": {
-            "this_flight": 367000,
-            "typical_for_this_route": 420000,
-            "difference_percent": -13
-        },
-        "price": 1217,
-        "type": "Round trip",
-        "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/KL.png",
-        "departure_token": "WyJDalJJUjJsalFuTnRRWEIyVEUxQlFYQklZbEZDUnkwdExTMHRMUzB0TFhaM1ltbHhORUZCUVVGQlIydHZNRmxyU20xRU0yRkJFZ3hMVERZNU1ueExUREV3TWprYUN3amR0Z2NRQWhvRFEwRkVPQnh3dmFVRiIsW1siWVlaIiwiMjAyNi0wMi0wMSIsIkFNUyIsbnVsbCwiS0wiLCI2OTIiXSxbIkFNUyIsIjIwMjYtMDItMDIiLCJNQU4iLG51bGwsIktMIiwiMTAyOSJdXV0="
+        "departure_token": "WyJDalJJY1hKa01HUllObmhpUjBsQlJUWjFjVkZDUnkwdExTMHRMUzB0TFhsc2JIRXhNVUZCUVVGQlIydDJVVkE0UVRReVNESkJFZ1pFVERVd09UZ2FDd2o4b1FRUUFob0RRMEZFT0J4dzE0WUQiLFtbIllZWiIsIjIwMjYtMDItMDUiLCJKRksiLG51bGwsIkRMIiwiNTA5OCJdXV0="
         }
     ],
     "price_insights": {
-        "lowest_price": 932,
-        "price_level": "high",
+        "lowest_price": 349,
+        "price_level": "typical",
         "typical_price_range": [
-        810,
-        910
+        330,
+        410
         ],
         "price_history": [
         [
-            1759032000,
-            848
-        ],
-        [
-            1759118400,
-            848
-        ],
-        [
-            1759204800,
-            848
-        ],
-        [
-            1759291200,
-            832
-        ],
-        [
-            1759377600,
-            832
-        ],
-        [
             1759464000,
-            833
+            328
         ],
         [
             1759550400,
-            794
+            380
         ],
         [
             1759636800,
-            794
+            380
         ],
         [
             1759723200,
-            754
+            328
         ],
         [
             1759809600,
-            754
+            328
         ],
         [
             1759896000,
-            793
+            318
         ],
         [
             1759982400,
-            793
+            328
         ],
         [
             1760068800,
-            832
+            289
         ],
         [
             1760155200,
-            831
+            383
         ],
         [
             1760241600,
-            831
+            383
         ],
         [
             1760328000,
-            831
+            289
         ],
         [
             1760414400,
-            831
+            310
         ],
         [
             1760500800,
-            832
+            310
         ],
         [
             1760587200,
-            832
+            310
         ],
         [
             1760673600,
-            832
+            310
         ],
         [
             1760760000,
-            833
+            384
         ],
         [
             1760846400,
-            835
+            384
         ],
         [
             1760932800,
-            835
+            310
         ],
         [
             1761019200,
-            834
+            310
         ],
         [
             1761105600,
-            794
+            310
         ],
         [
             1761192000,
-            793
+            354
         ],
         [
             1761278400,
-            792
+            354
         ],
         [
             1761364800,
-            791
+            407
         ],
         [
             1761451200,
-            791
+            407
         ],
         [
             1761537600,
-            791
+            354
         ],
         [
             1761624000,
-            791
+            354
         ],
         [
             1761710400,
-            791
+            361
         ],
         [
             1761796800,
-            791
+            362
         ],
         [
             1761883200,
-            788
+            346
         ],
         [
             1761969600,
-            788
+            392
         ],
         [
             1762056000,
-            788
+            407
         ],
         [
             1762146000,
-            788
+            362
         ],
         [
             1762232400,
-            788
+            363
         ],
         [
             1762318800,
-            812
+            363
         ],
         [
             1762405200,
-            812
+            363
         ],
         [
             1762491600,
-            812
+            362
         ],
         [
             1762578000,
-            812
+            408
         ],
         [
             1762664400,
-            813
+            407
         ],
         [
             1762750800,
-            813
+            362
         ],
         [
             1762837200,
-            813
+            362
         ],
         [
             1762923600,
-            813
+            352
         ],
         [
             1763010000,
-            813
+            352
         ],
         [
             1763096400,
-            812
+            352
         ],
         [
             1763182800,
-            812
+            397
         ],
         [
             1763269200,
-            813
+            397
         ],
         [
             1763355600,
-            813
+            352
         ],
         [
             1763442000,
-            866
+            352
         ],
         [
             1763528400,
-            866
+            352
         ],
         [
             1763614800,
-            849
+            352
         ],
         [
             1763701200,
-            849
+            353
         ],
         [
             1763787600,
-            849
+            373
         ],
         [
             1763874000,
-            849
+            373
         ],
         [
             1763960400,
-            849
+            337
         ],
         [
             1764046800,
-            849
+            344
         ],
         [
             1764133200,
-            850
+            342
         ],
         [
             1764219600,
-            932
+            347
+        ],
+        [
+            1764306000,
+            335
+        ],
+        [
+            1764392400,
+            336
+        ],
+        [
+            1764478800,
+            344
+        ],
+        [
+            1764565200,
+            350
+        ],
+        [
+            1764651600,
+            349
         ]
         ]
     },
@@ -993,14 +789,14 @@ def serp_flight_data():
         "arrival": [
             {
             "airport": {
-                "id": "MAN",
-                "name": "Manchester Airport"
+                "id": "JFK",
+                "name": "John F. Kennedy International Airport"
             },
-            "city": "Manchester",
-            "country": "United Kingdom",
-            "country_code": "GB",
-            "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTNUewWaPkLx7U-O4QLkOffkKe-vWjkPMFEowfMNAam9aJq5A78vp54NH8-Dwv8UcK-KJgvBgQf3aeKA",
-            "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYI78ftzh_cqqBG1wANTxyA6EVwiaKoPgvx8hE-VaF6lS8uXN_eCq0APuFsRFtejaYshXoPMA_BqWvSPOjkxgh1gXGBgmWyOJKFAwHb_4"
+            "city": "New York",
+            "country": "United States",
+            "country_code": "US",
+            "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRa1dwH1NZQk4dsbPiyA9Vrq2RX75jXSZ-OkHn7NkLHl-11HercqDXoZ4p2cDxJkH6vca2degawrCzHEQ",
+            "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEaUa9NsdPWGpAUGkTApkZDT_4M6_6V8wTcC0v1b1wJAJX-BuMSiipXbsoznGgcI1xLOc5QiTcR_xovexgjdOz0gqQe0tRQ9h0bUkZ07Q"
             }
         ]
         },
@@ -1008,14 +804,14 @@ def serp_flight_data():
         "departure": [
             {
             "airport": {
-                "id": "MAN",
-                "name": "Manchester Airport"
+                "id": "JFK",
+                "name": "John F. Kennedy International Airport"
             },
-            "city": "Manchester",
-            "country": "United Kingdom",
-            "country_code": "GB",
-            "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTNUewWaPkLx7U-O4QLkOffkKe-vWjkPMFEowfMNAam9aJq5A78vp54NH8-Dwv8UcK-KJgvBgQf3aeKA",
-            "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRYI78ftzh_cqqBG1wANTxyA6EVwiaKoPgvx8hE-VaF6lS8uXN_eCq0APuFsRFtejaYshXoPMA_BqWvSPOjkxgh1gXGBgmWyOJKFAwHb_4"
+            "city": "New York",
+            "country": "United States",
+            "country_code": "US",
+            "image": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRa1dwH1NZQk4dsbPiyA9Vrq2RX75jXSZ-OkHn7NkLHl-11HercqDXoZ4p2cDxJkH6vca2degawrCzHEQ",
+            "thumbnail": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQEaUa9NsdPWGpAUGkTApkZDT_4M6_6V8wTcC0v1b1wJAJX-BuMSiipXbsoznGgcI1xLOc5QiTcR_xovexgjdOz0gqQe0tRQ9h0bUkZ07Q"
             }
         ],
         "arrival": [
