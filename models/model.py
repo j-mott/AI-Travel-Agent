@@ -20,6 +20,7 @@ class Flight(BaseModel):
     arrival_airport: Airport
     overnight: bool
     duration: int
+    travel_class: str
 
 class Layover(BaseModel):
     name: str
@@ -30,6 +31,8 @@ class FlightTrip(BaseModel):
     flights: List[Flight]
     total_duration: int
     price: float
+    currency: str
+    gl: str
     layovers: Optional[List[Layover]]
 
 class AIReturnModel(BaseModel):

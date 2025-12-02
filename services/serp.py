@@ -19,9 +19,9 @@ class SerpAPIService:
     async def serp_flight_request(self, params: dict) -> dict:
         try:
             # For testing with static data use:
-            # return await asyncio.to_thread(serp_flight_data)
+            return await asyncio.to_thread(serp_flight_data)
             # For real API calls use:
-            return await asyncio.to_thread(lambda: GoogleSearch(params).get_dict())
+            # return await asyncio.to_thread(lambda: GoogleSearch(params).get_dict())
         except Exception as e:
             logger.error("Error during SERP API flight request: %s", e)
             raise HTTPException(status_code=500, detail=str(e))
@@ -49,9 +49,10 @@ class SerpAPIService:
                 arrival_airport=flight.get("arrival_airport", {}),
                 overnight=flight.get("overnight", False),
                 duration=flight.get("duration", 0),
+                travel_class=flight.get("travel_class")
             )
 
-        def _parse_flight_entry(entry: dict) -> FlightTrip | None:
+        def _parse_flight_entry(entry: dict, search_params: dict) -> FlightTrip | None:
             try:
                 flights: List[Flight] = []
                 for flight in entry.get("flights", []):
@@ -64,6 +65,8 @@ class SerpAPIService:
                     flights = flights,
                     total_duration = entry.get("total_duration"),
                     price = entry.get("price"),
+                    currency = search_params.get("currency"),
+                    gl = search_params.get("gl"),
                     layovers = entry.get("layovers", [])
                 )
 
@@ -73,10 +76,11 @@ class SerpAPIService:
 
         # Parse 'best_flights' then 'other_flights' if present
         if isinstance(flight_results, dict):
+            
             for key in ("best_flights", "other_flights"):
                 print(f"Processing flight results key: {key}")
                 for entry in flight_results.get(key, []):
-                    f = _parse_flight_entry(entry)
+                    f = _parse_flight_entry(entry, flight_results.get("search_parameters"))
                     if f:
                         parsed_flights.append(f)
 
