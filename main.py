@@ -21,8 +21,10 @@ async def get_flight_info(
     try:
         flights = await serp_service.search_flights(travel_info)
         flights_doc = format_data_for_ai(flights)
-
-        return AIReturnModel(flight_info=flights)
+        ai_flight_summary = await crew_service.generate_flight_summary(travel_info, flights_doc)
+        # print(ai_flight_summary)  # Debug print to verify AI-generated summary
+        # print(flights_doc)  # Debug print to verify formatted flight data
+        return AIReturnModel(flight_info=flights, ai_flight_summary=ai_flight_summary)
     
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))

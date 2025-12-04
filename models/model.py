@@ -35,8 +35,14 @@ class FlightTrip(BaseModel):
     gl: str
     layovers: Optional[List[Layover]]
 
+class BuildCrewOptions(BaseModel):
+    flight_info: str = Field(default=None, description="Formatted flight information for AI processing")
+    departure_city: str = Field(default=None, description="IATA code of the departure city")
+    arrival_city: str = Field(default=None, description="IATA code of the arrival city")
+    departure_date: str = Field(default=None, description="Departure date in YYYY-MM-DD format")
+    return_date: str = Field(default=None, description="Return date in YYYY-MM-DD format")
+    passengers: int = Field(default=1, description="Number of passengers")
+
 class AIReturnModel(BaseModel):
-    flight_info: List[FlightTrip] = Field(default_factory=list)
-    # hotel_info: List[Any] = Field(default_factory=list)
-    # ai_flight_info: str = ""
-    # ai_hotel_info: str = ""
+    flight_info: List[FlightTrip] = Field(default_factory=list, description="List of flight trip options")
+    ai_flight_summary: str = Field(default=None, description="AI-generated summary of flight options")
