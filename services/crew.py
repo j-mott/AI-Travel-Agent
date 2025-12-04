@@ -1,6 +1,5 @@
 import asyncio
 import logging
-import os
 from crewai import Agent, Crew, Process, Task
 from models.model import TravelRequest, BuildCrewOptions
 
