@@ -51,7 +51,7 @@ class CrewAPIService:
             • Price: Explain why this option offers the best value compared to others.
             • Airlines: Highlight the airlines involved and their reputations.
             • Duration: Justify the flights total travel time and how it compares favorably.
-            • layovers: Assess the number of layovers and why this route is optimal.
+            • Layovers: Assess the number of layovers and why this route is optimal.
             • Travel Class: Describe why this option offers the best comfort, class, or onboard experience.
 
             Important:
