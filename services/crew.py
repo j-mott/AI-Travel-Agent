@@ -35,7 +35,7 @@ class CrewAPIService:
         
         except Exception as e:
             logger.error("Error during CrewAI flight summary generation: %s", e)
-            return e
+            return str(e)
         
 
     def __create_prompt(self, agent: Agent, options: BuildCrewOptions):
