@@ -19,9 +19,9 @@ class SerpAPIService:
     async def serp_flight_request(self, params: dict) -> dict:
         try:
             # For testing with static data use:
-            return await asyncio.to_thread(serp_flight_data)
+            # return await asyncio.to_thread(serp_flight_data)
             # For real API calls use:
-            # return await asyncio.to_thread(lambda: GoogleSearch(params).get_dict())
+            return await asyncio.to_thread(lambda: GoogleSearch(params).get_dict())
         except Exception as e:
             logger.error("Error during SERP API flight request: %s", e)
             raise HTTPException(status_code=500, detail=str(e))
