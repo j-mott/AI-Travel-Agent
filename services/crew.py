@@ -39,9 +39,7 @@ class CrewAPIService:
         
 
     def __create_prompt(self, agent: Agent, options: BuildCrewOptions):
-        """Create a prompt for the given agent and options.
-        Uses getattr to avoid attribute errors if Agent does not expose 'name'.
-        """
+        """Create a prompt for the given agent and options."""
 
         prompt = """
             Recommend the best flight option based on the data provided.
