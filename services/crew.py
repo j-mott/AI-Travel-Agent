@@ -10,7 +10,7 @@ class CrewAPIService:
     def __init__(self):
         self.flight_agent = self.__build_agent("flight")
 
-    async def generate_flight_summary(self, travel_data: TravelRequest,flight_data: str) -> str:
+    async def generate_flight_summary(self, travel_data: TravelRequest, flight_data: str) -> str:
         logger.info("Generating flight summary using CrewAI...")
         
         options = BuildCrewOptions(
