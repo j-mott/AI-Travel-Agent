@@ -1,7 +1,7 @@
-from models.model import FlightTrip
+from models.model import FlightTrip, TravelRequest
 from typing import List
 
-def serp_flight_params(api_key, travel_request):
+def serp_flight_params(api_key, travel_request: TravelRequest):
         return {
             "api_key": api_key,
             "engine": "google_flights",
@@ -13,6 +13,21 @@ def serp_flight_params(api_key, travel_request):
             "outbound_date": travel_request.departure_date,
             "return_date": travel_request.return_date,
             "adults": travel_request.passengers
+        }
+
+def serp_hotel_params(api_key, travel_request: TravelRequest):
+        return {
+            "api_key": api_key,
+            "engine": "google_hotels",
+            "q": travel_request.arrival_city,
+            "currency": "CAD",
+            "gl": "ca",
+            "hl": "en",
+            "check_in_date": travel_request.departure_date,
+            "check_out_date": travel_request.return_date,
+            "adults": travel_request.passengers,
+            "rating": 7,
+            "sort_by": 13
         }
 
 def format_data_for_ai(flight_trips: List[FlightTrip] ) -> str:

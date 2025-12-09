@@ -35,6 +35,35 @@ class FlightTrip(BaseModel):
     gl: str
     layovers: Optional[List[Layover]]
 
+class HotelReviews(BaseModel):
+    name: str
+    description: str
+    total_mentioned: int
+    positive: int
+    negative: int
+    neutral: int
+
+class Transportation(BaseModel):
+    type: str
+    duration: str
+class NearbyPlace(BaseModel):
+    name: str
+    transportations: List[Transportation]
+class HotelTrip(BaseModel):
+    type: str
+    name: str
+    description: str
+    check_in_time: str
+    check_out_time: str
+    rate_per_night: str
+    total_rate: str
+    nearby_places: List[NearbyPlace]
+    hotel_class: float
+    overall_rating: float
+    location_rating: float
+    reviews_breakdown: List[HotelReviews]
+    property_token: str
+
 class BuildCrewOptions(BaseModel):
     flight_info: str = Field(default=None, description="Formatted flight information for AI processing")
     departure_city: str = Field(default=None, description="IATA code of the departure city")
@@ -44,5 +73,5 @@ class BuildCrewOptions(BaseModel):
     passengers: int = Field(default=1, description="Number of passengers")
 
 class AIReturnModel(BaseModel):
-    flight_info: List[FlightTrip] = Field(default_factory=list, description="List of flight trip options")
-    ai_flight_summary: str = Field(default=None, description="AI-generated summary of flight options")
+    flight_info: List[FlightTrip] = Field(default=[], description="List of flight trip options")
+    ai_flight_summary: str = Field(default='', description="AI-generated summary of flight options")
