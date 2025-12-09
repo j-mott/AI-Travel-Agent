@@ -1,12 +1,15 @@
 import asyncio
 import logging
-from crewai import Agent, Crew, Process, Task
+import os
+from crewai import Agent, Crew, Process, Task, LLM
 from models.model import TravelRequest, BuildCrewOptions
 
 logger = logging.getLogger(__name__)
 
 class CrewAPIService:
     def __init__(self):
+        # self.api_key = os.getenv("GEMINI_API_KEY")
+        self.api_key = os.getenv("OPENAI_API_KEY")
         self.flight_agent = self.__build_agent("flight")
 
     async def generate_flight_summary(self, travel_data: TravelRequest, flight_data: str) -> str:
@@ -22,6 +25,7 @@ class CrewAPIService:
         )
 
         crew = self.__create_crew(options)
+        
         try:
             results = await asyncio.to_thread(crew.kickoff)
 
@@ -41,20 +45,26 @@ class CrewAPIService:
         """Create a prompt for the given agent and options."""
 
         prompt = """
-            Recommend the best flight option based on the data provided.
-            
-            Your recommendation must include a clear justification across the following criteria:
-            • Price: Explain why this option offers the best value compared to others.
-            • Airlines: Highlight the airlines involved and their reputations.
-            • Duration: Justify the flights total travel time and how it compares favorably.
-            • Layovers: Assess the number of layovers and why this route is optimal.
-            • Travel Class: Describe why this option offers the best comfort, class, or onboard experience.
+            From the provided flight data, identify and recommend the top 3 flight options, each selected for a different strength.
+            Clearly explain why each flight stands out in one of the following categories:
 
-            Important:
-            • Use only the provided flight data.
-            • Do not repeat or summarize the flight details focus on your reasoned recommendation.  
-            
-            Flight Data:
+            🥇 Flight 1 Best Value
+                •	💰 Price: Why is this flight the best deal overall?
+                •	Consider: lowest cost for features, balanced trade-offs
+
+            🥈 Flight 2 Best Duration
+                •	⏱️ Travel Time: Why is this the most time-efficient choice?
+                •	Consider: fastest route, minimal layovers, direct flight
+
+            🥉 Flight 3 Best Comfort
+                •	💺 Travel Class & Experience: Why does this offer the most comfort or best overall travel experience?
+                •	Consider: seat class, onboard amenities, fewer stops, airline quality
+
+            ✅ Instructions:
+                •	Use the provided flight data as your source
+                •	Do not repeat or summarize the raw flight details
+                •	Justify each recommendation clearly and concisely
+                •	Make sure the reason for each selection is distinct
             """
 
         # Attach structured flight data to the prompt so the agent has context
@@ -70,6 +80,15 @@ class CrewAPIService:
                 
     def __build_agent(self, agent_type: str) -> Agent:
         """Create and return a CrewAI agent based on the specified type."""
+        llm = "openai/gpt-4.1-mini"
+        # llm = "gemini/gemini-2.0-flash"
+
+        llm_model = LLM(
+            model = llm,
+            api_key = self.api_key,
+            temperature = 0.5,
+            max_tokens = 1400,
+        )
 
         if agent_type == "flight":
             return Agent(
@@ -81,6 +100,7 @@ class CrewAPIService:
                 backstory=(
                     "You are a helpful travel assistant specializing in comparing flight options and presenting user-friendly summaries."
                 ),
+                llm=llm_model,
                 verbose = False,
                 allow_delegation = False,
             )
@@ -93,7 +113,6 @@ class CrewAPIService:
             tasks = [task],
             agents = [agent],
             process = Process.sequential,
-            memory = False,
             verbose = False, 
         )
 
