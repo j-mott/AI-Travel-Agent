@@ -29,7 +29,7 @@ class SerpAPIService:
             raise HTTPException(status_code=500, detail=str(e))
 
 
-    async def search_flights(self, travel_request: TravelRequest) -> Union[List[Flight], str]:
+    async def search_flights(self, travel_request: TravelRequest) -> Union[List[FlightTrip], str]:
         # Use SERP API to search for flights
         flight_results = await self.serp_request(serp_flight_params(self.api_key, travel_request))
 
