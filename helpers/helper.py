@@ -15,7 +15,7 @@ def serp_flight_params(api_key, travel_request: TravelRequest):
             "adults": travel_request.passengers
         }
 
-def serp_hotel_params(api_key, travel_request: TravelRequest):
+def serp_hotel_params(api_key: str, travel_request: TravelRequest):
         return {
             "api_key": api_key,
             "engine": "google_hotels",
