@@ -17,7 +17,7 @@ async def get_flight_info(
     travel_info: TravelRequest,
     serp_service: Annotated[SerpAPIService, Depends()],
     crew_service: Annotated[CrewAPIService, Depends()]
-    ) -> AIReturnModel:
+    ) -> Union[AIReturnModel, str]:
     
     try:
         # Search for flights using SERP API
