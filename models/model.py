@@ -46,6 +46,8 @@ class HotelReviews(BaseModel):
 class Transportation(BaseModel):
     type: str
     duration: str
+
+
 class NearbyPlace(BaseModel):
     name: str
     transportations: List[Transportation]
